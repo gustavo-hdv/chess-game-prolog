@@ -1,5 +1,6 @@
 :- [tabuleiro].
 :- [tipos].
+:- [movimento].
 
 pegaPeca(Indice, Tabuleiro, Peca) :- nth0(Indice, Tabuleiro, Peca).
 %% remove a peça da posição passada e adiciona "vazio" no lugar.

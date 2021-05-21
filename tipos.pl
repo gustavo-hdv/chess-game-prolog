@@ -11,3 +11,5 @@ preto(cP).
 preto(bP).
 preto(dP).
 preto(rP).
+
+vazio(vZ).
