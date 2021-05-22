@@ -1,11 +1,11 @@
-tabuleiro(T) :- T = [tP, cP, bP, dP, rP, bP, cP, tP,
-                     pP, pP, pP, pP, pP, pP, pP, pP,
-                     vZ, vZ, vZ, vZ, vZ, vZ, vZ, vZ,
-                     vZ, vZ, vZ, vZ, vZ, vZ, vZ, vZ,
-                     vZ, vZ, vZ, vZ, vZ, vZ, vZ, vZ,
-                     vZ, vZ, vZ, vZ, vZ, vZ, vZ, vZ,
-                     pB, pB, pB, pB, pB, pB, pB, pB,
-                     tB, cB, bB, dB, rB, bB, cB, tB].
+tabuleiro(T) :- T = ['\u2656','\u2658', '\u2657','\u2655', '\u2654','\u2657', '\u2658', '\u2656',
+                     '\u2659', '\u2659','\u2659', '\u2659', '\u2659', '\u2659', '\u2659', '\u2659',
+                      '\u25A1','\u25A1','\u25A1', '\u25A1', '\u25A1', '\u25A1', '\u25A1', '\u25A1',
+                      '\u25A1','\u25A1','\u25A1', '\u25A1', '\u25A1', '\u25A1', '\u25A1', '\u25A1',
+                      '\u25A1','\u25A1','\u25A1', '\u25A1', '\u25A1', '\u25A1', '\u25A1', '\u25A1',
+                     '\u25A1','\u25A1','\u25A1', '\u25A1', '\u25A1', '\u25A1', '\u25A1', '\u25A1',
+                      '\u265F', '\u265F', '\u265F', '\u265F', '\u265F', '\u265F', '\u265F', '\u265F',
+                     '\u265C', '\u265E', '\u265D', '\u265B', '\u265A','\u265D', '\u265E', '\u265C'].
 
 tabuleiroComCoords(T) :- T = [a8, b8, c8, d8, e8, f8, g8, h8,
                               a7, b7, c7, d7, e7, f7, g7, h7,

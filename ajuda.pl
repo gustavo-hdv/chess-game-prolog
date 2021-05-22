@@ -1,5 +1,6 @@
 :-[saida].
 
+
 getDescricaoPecas() :-
   pecasBrancas(PB),
   pecasPretas(PP),
@@ -26,11 +27,12 @@ getDescPecasPretas([X|Y]) :-
 
 ajuda() :-
   write('Escolha uma das opções:'), nl,
-  write('1 para Glossário | 2 para Visualizar Coordenadas do Tabuleiro | 3 para Sair'), nl,
+  write('1 para Glossário | 2 para Visualizar Coordenadas do Tabuleiro | 3 Continuar Jogando | 4 Sair do jogo'), nl,
   read(INPUT),
   (INPUT == 1 -> getDescricaoPecas(), nl, (querVoltar() -> ajuda(); true);
   INPUT == 2 -> tabuleiroComCoords(T), printTabuleiro(T, 0, ""), nl, (querVoltar() -> ajuda(); true);
   INPUT == 3 -> true;
+  INPUT == 4 -> halt;
   write('Opção inválida.'), ajuda()).
 
 querVoltar() :-

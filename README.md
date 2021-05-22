@@ -5,7 +5,7 @@
 - Marcos Silva
 - Pedro Donato
 - Gustavo Ventura
-- Wendson
+- Wendson Magalhães
 
 
 ## Como rodar:

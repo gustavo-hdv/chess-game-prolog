@@ -18,21 +18,16 @@ getLinhaFromIndice(48, Peca, R) :- atom_concat('2   ', Peca, R).
 getLinhaFromIndice(56, Peca, R) :- atom_concat('1   ', Peca, R).
 getLinhaFromIndice(_, Peca, Peca).
 
-getColunas(R) :- atomic_list_concat(['    a', '   b', '   c', '   d', '   e', '   f', '   g', '   h'], ' ', R).
+getColunas(R) :- atomic_list_concat(['    a', '  b', '  c', '  d', '  e', '  f', '  g', '  h'], ' ', R).
 
 imprimeTurno(T1):- T1 == b -> write('Branco'); write('Preto').
 
 
 menu():-
-	write('**********************************************************'),nl,
-	write('*                  Jogo de Xadrez                        *'),nl,
-	write('*                                                        *'),nl,
-	write('*                Digite ajuda. para:                     *'),nl,
-	write('*       1 para Glossário                                 *'),nl,
-	write('*       2 para Visualizar Coordenadas do Tabuleiro       *'),nl,
-	write('*                                                        *'),nl,
-	write('*                Digite sair. para sair do jogo          *'),nl,
-	write('**********************************************************'),nl.
+	write('************************************'),nl,
+	write('*          Jogo de Xadrez          *'),nl,
+	write('*                                  *'),nl,
+	write('************************************'),nl.
 	
 	
 casa(a1,R):- R is 56.
