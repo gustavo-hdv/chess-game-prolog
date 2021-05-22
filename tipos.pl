@@ -1,15 +1,18 @@
-branco(pB).
-branco(tB).
-branco(cB).
-branco(bB).
-branco(dB).
-branco(rB).
+branco(pB, 'Peão branco').
+branco(tB, 'Torre branca').
+branco(cB, 'Cavalo branco').
+branco(bB, 'Bispo branco').
+branco(dB, 'Dama branca').
+branco(rB, 'Rei branco').
 
-preto(pP).
-preto(tP).
-preto(cP).
-preto(bP).
-preto(dP).
-preto(rP).
+preto(pP, 'Peão preto').
+preto(tP, 'Torre preta').
+preto(cP, 'Cavalo preto').
+preto(bP, 'Bispo preto').
+preto(dP, 'Dama preta').
+preto(rP, 'Rei preto').
 
-vazio(vZ).
+vazio(vZ, 'Espaço vazio').
+
+pecasBrancas(R) :- R = [pB, tB, cB, bB, dB, rB].
+pecasPretas(R) :- R = [pP, tP, cP, bP, dP, rP].

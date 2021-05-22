@@ -1,6 +1,7 @@
 :- [tabuleiro].
 :- [tipos].
 :- [movimento].
+:- [ajuda].
 
 pegaPeca(Indice, Tabuleiro, Peca) :- nth0(Indice, Tabuleiro, Peca).
 %% remove a peça da posição passada e adiciona "vazio" no lugar.
@@ -30,4 +31,4 @@ espacamentoIndices(String, C, R) :- C < 10 -> atom_concat(String, "    ", R) ; a
     %%read(Indice),
     %%tabuleiro(Tabuleiro),
     %%pegaPeca(Indice, Tabuleiro, Peca).
-    %%branco(Peca) -> write("A peça é branca") ; write("A peça é preta"),
+    %%branco(Peca, _) -> write("A peça é branca") ; write("A peça é preta"),
