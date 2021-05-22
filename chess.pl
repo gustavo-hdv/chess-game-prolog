@@ -2,6 +2,8 @@
 :- [tipos].
 :- [movimento].
 :- [ajuda].
+:-[entrada].
+:-[saida].
 
 pegaPeca(Indice, Tabuleiro, Peca) :- nth0(Indice, Tabuleiro, Peca).
 %% remove a peça da posição passada e adiciona "vazio" no lugar.
@@ -23,9 +25,31 @@ printIndices([], C, StringIndices) :- C =:= 64, write(StringIndices), nl.
 printIndices([X|Y], C, StringIndices) :- M is C + 1, (C mod 8 =:= 0 -> write(StringIndices), nl, espacamentoIndices(X, C, V), printIndices(Y, M, V);
                                             atom_concat(StringIndices, X, R), espacamentoIndices(R, C, Z), printIndices(Y, M, Z)).
 
-espacamento(String, C, R) :- atom_concat(String, "   ", R).
+espacamento(String,_C, R) :- atom_concat(String, "   ", R).
 espacamentoIndices(String, C, R) :- C < 10 -> atom_concat(String, "    ", R) ; atom_concat(String, "   ", R).
 
+turno(b,p).
+turno(p,b).
+
+jogo:-
+	menu,
+	tabuleiro(T),
+	printTabuleiroComCoordenadas(T,0,""),nl,
+	imprimeTurno(b),
+	pegaMovimento(_X,_Y,X1,Y1),
+	troca(T,X1,Y1,TR),
+	turno(b,PrxTurno),
+	loop(TR,PrxTurno).
+	
+loop(T,Turno):-
+	menu,
+	printTabuleiroComCoordenadas(T,0,""),nl,
+	imprimeTurno(Turno),
+	pegaMovimento(_X,_Y,X1,Y1),
+	troca(T,X1,Y1,TR),
+	turno(Turno,PrxTurno),
+	loop(TR,PrxTurno). 
+	
 %% Testando o programa
 %%main :-
     %%read(Indice),
