@@ -38,3 +38,18 @@ getLinhaFromIndice(56, Peca, R) :- atom_concat('1   ', Peca, R).
 getLinhaFromIndice(_, Peca, Peca).
 
 getColunas(R) :- atomic_list_concat(['     a', '   b', '   c', '   d', '   e', '   f', '   g', '   h'], ' ', R).
+
+ajuda() :-
+  write('Escolha uma das opções:'), nl,
+  write('1 para Glossário | 2 para Visualizar Coordenadas do Tabuleiro | 3 para Sair'), nl,
+  read(INPUT),
+  (INPUT == 1 -> getDescricaoPecas(), nl, (querVoltar() -> ajuda(); true);
+  INPUT == 2 -> tabuleiroComCoords(T), printTabuleiro(T, 0, ""), nl, (querVoltar() -> ajuda(); true);
+  INPUT == 3 -> true;
+  write('Opção inválida.'), ajuda()).
+
+querVoltar() :-
+  write('Deseja voltar para a tela de ajuda? 1 - Sim | 2 - Não'), nl,
+  read(INPUT),
+  (INPUT == 1 -> true;
+  false).
